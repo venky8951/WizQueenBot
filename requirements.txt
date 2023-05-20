@@ -1,1 +1,3 @@
 flask
+jugaad_data
+pandas
