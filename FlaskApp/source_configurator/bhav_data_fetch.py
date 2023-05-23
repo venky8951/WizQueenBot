@@ -1,5 +1,5 @@
 import pandas as pd
-from ifetch_data import IFetchData
+from source_configurator.ifetch_data import IFetchData
 from datetime import date, timedelta
 from jugaad_data.nse import bhavcopy_fo_save
 

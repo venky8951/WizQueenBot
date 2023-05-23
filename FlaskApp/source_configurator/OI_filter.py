@@ -1,5 +1,5 @@
-from stock_filter import StockFilter
-from bhav_data_fetch import BhavDataFetch
+from source_configurator.stock_filter import StockFilter
+from source_configurator.bhav_data_fetch import BhavDataFetch
 
 # Get the nearest month end date
 nearest_month_end = '25-May-2023'

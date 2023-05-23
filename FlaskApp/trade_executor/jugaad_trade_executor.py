@@ -1,4 +1,4 @@
-from itrade_executor import ITradeExecutor
+from trade_executor.itrade_executor import ITradeExecutor
 from jugaad_trader import Zerodha
 from source_configurator.stock_filter import StockFilter
 kite = Zerodha()
