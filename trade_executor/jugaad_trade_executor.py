@@ -1,8 +1,9 @@
 from itrade_executor import ITradeExecutor
 from jugaad_trader import Zerodha
+from source_configurator.stock_filter import StockFilter
 kite = Zerodha()
 
-class IndicatorStockFilter(StockFilter):
+class JugaadTradeExecutor(ITradeExecutor):
 
     def execute(self, symbol, stop_loss, quantity):
         order_resp = kite.place_order(variety=kite.VARIETY_REGULAR,
