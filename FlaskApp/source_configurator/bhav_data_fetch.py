@@ -12,9 +12,10 @@ class BhavDataFetch(IFetchData):
         # Get today's and yesterday's dates
         today = date(2023, 5, 19)
         yesterday = today - timedelta(days=1)
-        today_bhav_path = "../Artifacts/fo" + today.strftime("%d%b%Y") + "bhav.csv"
-        yesterday_bhav_path = "fo" + yesterday.strftime("%d%b%Y") + "bhav.csv"
-        output_directory = "../Artifacts"
+        output_directory = "FlaskApp\source_configurator\Artifacts"
+
+        today_bhav_path = output_directory + "\\fo" + today.strftime("%d%b%Y") + "bhav.csv"
+        yesterday_bhav_path = output_directory + "\\fo" + yesterday.strftime("%d%b%Y") + "bhav.csv"
 
         bhavcopy_fo_save(yesterday, output_directory)
         bhavcopy_fo_save(today, output_directory)

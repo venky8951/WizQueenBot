@@ -10,7 +10,7 @@ class OIFilter(StockFilter):
 
         # Filter stocks based on price and open interest changes
         filtered_stocks = []
-        today_data,yesterday_data = BhavDataFetch.fetch_all_stock_data()
+        today_data,yesterday_data = BhavDataFetch().fetch_all_stock_data(any,any)
         for symbol in today_data['SYMBOL'].unique():
             today_df = today_data[today_data['SYMBOL'] == symbol]
             yesterday_df = yesterday_data[yesterday_data['SYMBOL'] == symbol]

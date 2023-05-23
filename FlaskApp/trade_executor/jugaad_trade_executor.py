@@ -15,3 +15,20 @@ class JugaadTradeExecutor(ITradeExecutor):
 			product=kite.PRODUCT_CNC,
             trailing_stoploss=stop_loss)
         print(order_resp)
+    def gtt(self,symbol):
+        kite.set_access_token()
+        ORDER= [
+			{
+			"exchange":"NSE",
+			"tradingsymbol": symbol,
+			"transaction_type": kite.TRANSACTION_TYPE_BUY,
+			"quantity": 1,
+			"order_type": "LIMIT",
+			"product": "NRML",
+			"price": 10000
+			}]
+        trigger_id = kite.place_gtt(trigger_type=kite.GTT_TYPE_SINGLE,
+                            tradingsymbol=symbol, 
+                            exchange='NSE',
+                            trigger_values=[10001],
+                            last_price=9000,orders=ORDER)
