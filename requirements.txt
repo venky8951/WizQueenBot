@@ -2,6 +2,3 @@ flask
 jugaad_data
 pandas
 jugaad-trader
-apscheduler
-abc
-datetime
